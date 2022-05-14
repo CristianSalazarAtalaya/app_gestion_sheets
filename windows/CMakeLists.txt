@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(my_app LANGUAGES CXX)
+project(fl_components LANGUAGES CXX)
 
-set(BINARY_NAME "my_app")
+set(BINARY_NAME "fl_components")
 
 cmake_policy(SET CMP0063 NEW)
 
