@@ -17,9 +17,9 @@ class CodigoScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-          key: myFormKey,
           child: Form(
-              child: Column(
+            key: myFormKey,
+            child: Column(
             children: [
               const SizedBox(height: 30),
               //Insertamos el id
@@ -39,7 +39,8 @@ class CodigoScreen extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  FocusScope.of(context).requestFocus(FocusNode());
+                  //FocusScope.of(context).requestFocus(FocusNode());
+                  FocusManager.instance.primaryFocus?.unfocus();
 
                   if (!myFormKey.currentState!.validate()) {
                     print('Formulario no valido');

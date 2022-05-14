@@ -65,12 +65,9 @@ class InputsScreen extends StatelessWidget {
                     value: 'Admin',
                     items: const [
                       DropdownMenuItem(child: Text('Admin'), value: 'Admin'),
-                      DropdownMenuItem(
-                          child: Text('SuperUser'), value: 'SuperUser'),
-                      DropdownMenuItem(
-                          child: Text('Developer'), value: 'Developer'),
-                      DropdownMenuItem(
-                          child: Text('Jr Developer'), value: 'Jr Developer')
+                      DropdownMenuItem(child: Text('SuperUser'), value: 'SuperUser'),
+                      DropdownMenuItem( child: Text('Developer'), value: 'Developer'),
+                      DropdownMenuItem(child: Text('Jr Developer'), value: 'Jr Developer')
                     ],
                     onChanged: (value) {
                       print(value);
@@ -83,8 +80,8 @@ class InputsScreen extends StatelessWidget {
                         width: double.infinity,
                         child: Center(child: Text('Guardar'))),
                     onPressed: () {
-                      FocusScope.of(context)
-                          .requestFocus(FocusNode()); //quitar el teclado
+                      //FocusScope.of(context).requestFocus(FocusNode()); //quitar el teclado
+                      FocusManager.instance.primaryFocus?.unfocus();
                       //imprimimos los valores de los formularios
                       if (!myFormKey.currentState!.validate()) {
                         print('Formulario no valido');
