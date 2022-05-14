@@ -1,4 +1,4 @@
-package com.example.app_gestion_sheets
+package com.example.my_app
 
 import io.flutter.embedding.android.FlutterActivity
 
