@@ -1,6 +1,7 @@
 import 'package:fl_components/models/models.dart';
 import 'package:fl_components/screens/codigo_screen.dart';
 import 'package:fl_components/screens/proyecto_screen.dart';
+import 'package:fl_components/screens/sitio_screen.dart';
 import 'package:flutter/material.dart';
 import '../screens/screen.dart';
 
@@ -54,7 +55,12 @@ class AppRoutes {
         route: 'proyecto',
         name: 'Proyectos HyC',
         screen: const ProyectoScreen(),
-        icon: Icons.business_center_outlined)
+        icon: Icons.business_center_outlined),
+    MenuOption(
+        route: 'sitio',
+        name: 'Sitios',
+        screen: const SitioScreen(),
+        icon: Icons.business_center_outlined),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
